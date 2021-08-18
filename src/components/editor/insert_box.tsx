@@ -258,6 +258,7 @@ export class InsertBox extends React.Component<InsertBoxProps, InsertBoxState> {
       selection.wrapNode(childSetBlock, index - 1, suggestion.node, suggestion.wrapChildSetId);
     } else {
       selection.insertNode(childSetBlock, index, suggestion.node);
+      selection.moveCursorToNextInsert();
     }
   }
 
